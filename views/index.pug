@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    h1 File upload
+    form(action='/upload' method="post" enctype="multipart/form-data")
+      .file-field.input-field
+        .btn.grey
+          span File
+          input(name="images" type="file" multiple="multiple")
+        .file-path-wrapper
+          input.file-path.validate(type="text")
+      button(type="submit" class="btn") Submit
+    - for (let path of filesPath)
+      img(src=path class="responsive-img")
+  script.
