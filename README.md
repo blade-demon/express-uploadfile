@@ -1,3 +1,3 @@
-## ImageUpload Example
+# ImageUpload Demo
 
-### With pure javascript and multer, express.js backended
+## 使用 express， multer, materialize.css, pug 搭建图像上传功能。
